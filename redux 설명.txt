@@ -1,0 +1,20 @@
+1. Reducer
+- Biz logic (데이터 처리, 상태 처리)
+- Root reducer에 Reducer를 추가
+- src/reducers/reducer-books.js
+- src/reducers/reducer-active-book.js
+2. src/index.js
+- reducer를 가지고 store 생성
+- App.js 실행 시 store 지정
+3. 사용자의 요청 작업 (이벤트 등)
+- src/actions/index.js 등록 -> selectBook
+- Action -> type(BOOK_SELECTED), payload (상태 값)
+4. 사용자 View (or Container) component
+- src/containers/book-list.js
+- src/containers/book-detail.js
+5. Component하고 Reducer(Store) 하고 연결
+- mapStatetoProps(state)
+- mapDispatchToProps(dispatch)
+- connect() 함수 사용
+  - ex1) connect(mapStateToProps, mapDispatchToProps)(BookList)
+  - ex2) connect(mapStateToProps)(BookList)
